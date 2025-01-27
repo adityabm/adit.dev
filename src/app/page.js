@@ -47,7 +47,7 @@ async function getData() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer Uj2OtfjeWAnhICPCu6OL5SnctIxmlffD`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
     },
   });
   const data = await res.json();
@@ -62,7 +62,7 @@ async function getExperiences() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer Uj2OtfjeWAnhICPCu6OL5SnctIxmlffD`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
     }
   );
@@ -78,7 +78,7 @@ async function getProjects() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer Uj2OtfjeWAnhICPCu6OL5SnctIxmlffD`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
     }
   );
