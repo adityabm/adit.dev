@@ -8,10 +8,12 @@ services:
       - ./database:/directus/database
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
+    env_file:
+      - ./.env
     environment:
-      SECRET: "sangatsecretsekali"
-      ADMIN_EMAIL: "me@adit.dev"
-      ADMIN_PASSWORD: "Rekayasa1."
+      SECRET: "${BE_SECRET_KEY:-secret}"
+      ADMIN_EMAIL: "${BE_ADMIN_EMAIL:-secret}"
+      ADMIN_PASSWORD: "${BE_ADMIN_PASSWORD:-secret}"
       DB_CLIENT: "sqlite3"
       DB_FILENAME: "/directus/database/data.db"
       WEBSOCKETS_ENABLED: "true"
